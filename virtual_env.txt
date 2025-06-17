@@ -1,0 +1,13 @@
+1.Create a virtual environment 
+
+# python3 -m venv venv_genai
+
+2.Activate the virtual environment:
+
+windows
+
+#venv_genai\Scripts\activate.bat
+
+linex/macos
+
+#source venv_genai/bin/activate
