@@ -21,7 +21,7 @@ print("5.turbo")
 whisper_model_pick = input("pick the model")
 
 # 🎙 Load Whisper model
-whisper_model = whisper.load_model(whisper_model_pick) //replace it accouding your need 
+whisper_model = whisper.load_model(whisper_model_pick) 
 
 # ❤ Emotion detection model
 emotion_model_name = "bhadresh-savani/distilbert-base-uncased-emotion"
