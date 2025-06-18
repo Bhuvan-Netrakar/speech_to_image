@@ -11,8 +11,17 @@ import matplotlib.pyplot as plt
 import torch
 from diffusers import StableDiffusionPipeline
 
+print("pick your model")
+print("1.tiny")
+print("2.small")
+print("3.medium")
+print("4.large")
+print("5.turbo")
+
+whisper_model_pick = input("pick the model")
+
 # 🎙 Load Whisper model
-whisper_model = whisper.load_model("medium")
+whisper_model = whisper.load_model(whisper_model_pick) //replace it accouding your need 
 
 # ❤ Emotion detection model
 emotion_model_name = "bhadresh-savani/distilbert-base-uncased-emotion"
