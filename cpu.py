@@ -27,8 +27,17 @@ for path in [WHISPER_MODEL_DIR, EMOTION_MODEL_DIR, SUMMARIZER_MODEL_DIR,
              TRANSLATION_EN_HI_MODEL_DIR, TRANSLATION_EN_KN_MODEL_DIR, STABLE_DIFFUSION_MODEL_DIR]:
     os.makedirs(path, exist_ok=True)
 
+print("pick your model")
+print("1.tiny")
+print("2.small")
+print("3.medium")
+print("4.large")
+print("5.turbo")
+
+whisper_model_pick = input("pick the model")
+
 # 🎙 Load Whisper model (CPU only)
-whisper_model = whisper.load_model("medium", download_root=WHISPER_MODEL_DIR, device="cpu")
+whisper_model = whisper.load_model(whisper_model_pick, download_root=WHISPER_MODEL_DIR, device="cpu")
 
 # ❤ Emotion detection model
 emotion_model_name = "bhadresh-savani/distilbert-base-uncased-emotion"
